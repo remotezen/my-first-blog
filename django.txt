@@ -1,0 +1,21 @@
+python3 -m venv myvenv
+source myvenv/bin/activate
+django-admin startproject mysite .
+[manage.py] migrate
+            createsuperuser
+
+
+####In settings.py
+### add your application
+INSTALLED_APPS=(blog)
+
+
+python manage.py makemigrations blog
+python manage.py migrate blog
+
+######In blog/admin.py
+from django.contrib import admin
+from .models import Post
+admin.site.register(Post)
+
+
