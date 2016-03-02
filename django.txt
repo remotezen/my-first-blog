@@ -31,3 +31,5 @@ python manage.py migrate
 
 ####Urls
 
+####Get a Shell
+    manage.py shell
